@@ -49,7 +49,76 @@
             </div>
         </div>
     </nav>
-    
+
+    <div class="container">
+        <div class="stepwizard">
+            <div class="stepwizard-row setup-panel">
+                <div class="stepwizard-step col-xs-4"> 
+                    <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
+                    <p><small>Información Personal</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-4"> 
+                    <a href="#step-2" type="button" class="btn btn-default btn-circle">2</a>
+                    <p><small>Información de Reservación</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-4"> 
+                    <a href="#step-3" type="button" class="btn btn-default btn-circle">3</a>
+                    <p><small>Resumen</small></p>
+                </div>
+            </div>
+        </div>
+
+        <form role="form" method="POST" action="{!! url('/reserva') !!}">
+            {{csrf_field()}}
+            <div class="panel panel-primary setup-content" id="step-1">
+                <div class="panel-heading">
+                    <h3 class="panel-title" align="center">Información Personal</h3>
+                </div>
+                <!--Datos personales que se ingresaran a la base de datos-->
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="control-label">Nombres</label>
+                        <input maxlength="100" type="text" name="nombre" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Apellidos</label>
+                        <input maxlength="100" type="text" name="apellido" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Email</label>
+                        <input maxlength="100" type="text" name="correo" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Teléfono</label>
+                        <input maxlength="100" type="text" name="telefono" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Identificación</label>
+                        <input maxlength="100" type="text" name="identificacion" class="form-control"/>
+                    </div>
+                    <button class="btn btn-primary nextBtn pull-right" action="{!! url('/reserva') !!}" type="button" type="submit">Siguiente</button>
+                </div>
+            </div>
+            <!-- Piso, Tipo de habitacion, Descripcion de  la habitacion, Tiempo de reservacion-->
+            <div class="panel panel-primary setup-content" id="step-2">
+                <div class="panel-heading">
+                    <h3 class="panel-title" align="center">Información de la Reservación</h3>
+                </div>
+                <div class="panel-body">
+                </div>
+            </div>
+            <!--Resumen de la reservacion-->
+            <div class="panel panel-primary setup-content" id="step-3">
+                <div class="panel-heading">
+                    <h3 class="panel-title" align="center">Resumen de la Reservación</h3>
+                </div>
+                <div class="panel-body">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
     <footer>
         <div class="container" >
             <div class="row">
