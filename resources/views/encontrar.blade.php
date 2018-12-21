@@ -85,14 +85,14 @@
     </div>
     
     <footer>
-                <div class="container" >
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <p style="padding : 15px">Copyright &copy; Soluciones Informaticas Matagalpa 2018-2019</p>
-                        </div>
-                    </div>
+        <div class="container" >
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p style="padding : 15px">Copyright &copy; Soluciones Informaticas Matagalpa 2018-2019</p>
                 </div>
-            </footer>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/jquery.js"></script>
 
