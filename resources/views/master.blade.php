@@ -117,6 +117,14 @@
             interval: 5000
         }) 
     </script>
-
+    <footer>
+        <div class="container" >
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p style="padding : 15px">Copyright &copy; Soluciones Informaticas Matagalpa 2018-2019</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
