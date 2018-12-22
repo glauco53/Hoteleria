@@ -116,7 +116,6 @@
                 </div>
             </div>
         </form>
-
     </div>
 
     <footer>
