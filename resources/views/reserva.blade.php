@@ -76,27 +76,49 @@
                 </div>
                 <!--Datos personales que se ingresaran a la base de datos-->
                 <div class="panel-body">
-                    <div class="form-group">
+                    <div class="form-group row">
+                        <label for="Nombre" class="col-md-4 col-form-label">{{ __('Nombre') }}</label>
+                        <div class="col-md-6">
+                            <input id="nombre" type="text" class="form-control{{ $errors->has('nombre') ? ' is-invalid' : '' }}" name="nombre" value="{{ old('nombre') }}" required autofocus>
+                            @if ($errors->has('nombre'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('nombre') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Apellido" class="col-md-4 col-form-label">{{ __('Apellido') }}</label>
+                        <div class="col-md-6">
+                            <input id="apellido" type="text" class="form-control{{ $errors->has('apellido') ? ' is-invalid' : '' }}" name="apellido" value="{{ old('apellido') }}" required autofocus>
+                            @if ($errors->has('apellido'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('apellido') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+                    <!--<div class="form-group">
                         <label class="control-label">Nombres</label>
-                        <input maxlength="100" type="text" name="nombre" class="form-control"/>
+                        <input maxlength="100" type="text" name="nombre" class="form-control" required="required"/>
                     </div>
                     <div class="form-group">
                         <label class="control-label">Apellidos</label>
-                        <input maxlength="100" type="text" name="apellido" class="form-control"/>
+                        <input maxlength="100" type="text" name="apellido" class="form-control" required="required"/>
                     </div>
                     <div class="form-group">
                         <label class="control-label">Email</label>
-                        <input maxlength="100" type="text" name="correo" class="form-control"/>
+                        <input maxlength="100" type="text" name="correo" class="form-control" required="required"/>
                     </div>
                     <div class="form-group">
                         <label class="control-label">Teléfono</label>
-                        <input maxlength="100" type="text" name="telefono" class="form-control"/>
+                        <input maxlength="100" type="text" name="telefono" class="form-control" required="required"/>
                     </div>
                     <div class="form-group">
                         <label class="control-label">Identificación</label>
-                        <input maxlength="100" type="text" name="identificacion" class="form-control"/>
-                    </div>
-                    <button class="btn btn-primary nextBtn pull-right" action="{!! url('/reserva') !!}" type="button" type="submit">Siguiente</button>
+                        <input maxlength="100" type="text" name="identificacion" class="form-control" required="required"/>
+                    </div>-->
+                    <button class="btn btn-primary nextBtn pull-right" type="button">Siguiente</button>
                 </div>
             </div>
             <!-- Piso, Tipo de habitacion, Descripcion de  la habitacion, Tiempo de reservacion-->
@@ -106,6 +128,7 @@
                 </div>
                 <div class="panel-body">
                 </div>
+                 <button class="btn btn-primary nextBtn pull-right" type="button">Siguiente</button>
             </div>
             <!--Resumen de la reservacion-->
             <div class="panel panel-primary setup-content" id="step-3">
@@ -114,6 +137,7 @@
                 </div>
                 <div class="panel-body">
                 </div>
+                 <button class="btn btn-primary nextBtn pull-right" type="button">Siguiente</button>
             </div>
         </form>
     </div>
