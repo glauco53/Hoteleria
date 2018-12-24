@@ -98,6 +98,39 @@
                             @endif
                         </div>
                     </div>
+                    <div class="form-group row">
+                        <label for="Email" class="col-md-4 col-form-label">{{ __('Email') }}</label>
+                        <div class="col-md-6">
+                            <input id="email" type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                            @if ($errors->has('email'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Identificacion" class="col-md-4 col-form-label">{{ __('Identificacion') }}</label>
+                        <div class="col-md-6">
+                            <input id="identificacion" type="text" class="form-control{{ $errors->has('identificacion') ? ' is-invalid' : '' }}" name="identificacion" value="{{ old('identificacion') }}" required autofocus>
+                            @if ($errors->has('identificacion'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('identificacion') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Telefono" class="col-md-4 col-form-label">{{ __('Telefono') }}</label>
+                        <div class="col-md-6">
+                            <input id="telefono" type="text" class="form-control{{ $errors->has('telefono') ? ' is-invalid' : '' }}" name="telefono" value="{{ old('identificacion') }}" required autofocus>
+                            @if ($errors->has('telefono'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('telefono') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
                     <!--<div class="form-group">
                         <label class="control-label">Nombres</label>
                         <input maxlength="100" type="text" name="nombre" class="form-control" required="required"/>
