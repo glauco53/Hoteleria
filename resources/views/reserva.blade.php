@@ -160,6 +160,30 @@
                     <h3 class="panel-title" align="center">Información de la Reservación</h3>
                 </div>
                 <div class="panel-body">
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Piso</label>
+                        <div class="col-md-6">
+                            <select class="form-control">
+                                
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Tipo de Habitación</label>
+                        <div class="col-md-6">
+                            <select class="form-control">
+                                
+                            </select>
+                        </div>
+                    </div>
+
+                  <div class="form-group row">
+                        <label for="Telefono" class="col-md-4 col-form-label">Tiempo de Reservación</label>
+                        <div class="col-md-6">
+                            <input id="placeholder" type="text" class="form-control" name="placeholder">
+                        </div>
+                    </div>
                 </div>
                  <button class="btn btn-primary nextBtn pull-right" type="button">Siguiente</button>
             </div>
