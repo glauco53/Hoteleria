@@ -23,12 +23,13 @@ class ReservaRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'nombre'    =>  '',
-            'apellido'  =>  '',
-            'identificacion'    =>  '',
-            'correo'    =>  '',
-            'telefono'  =>  '',
+        return [ //datos del usuario
+            'nombre'    =>  'required|alpha|max:25',
+            'apellido'  =>  'required|alpha|max:25',
+            'identificacion'    =>  'required|alpha_num',
+            'correo'    =>  'required|email',
+            'telefono'  =>  'required|integer',
+            //datos de la habitacion
         ];
     }
 }
