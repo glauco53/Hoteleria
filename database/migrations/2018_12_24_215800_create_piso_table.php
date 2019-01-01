@@ -14,6 +14,7 @@ class CreatePisoTable extends Migration
     public function up()
     {
         Schema::create('piso', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('idpiso');
             $table->unsignedInteger('numero_piso');
             $table->unsignedInteger('can_hab');

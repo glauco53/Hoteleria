@@ -14,7 +14,8 @@ class CreateFacturaTable extends Migration
     public function up()
     {
         Schema::create('factura', function (Blueprint $table) {
-            $table->increments('idfactura');
+            $table->engine = 'InnoDB';
+            $table->unsignedInteger('idfactura');
             $table->date('fecha_ingreso');
             $table->double('monto');
             $table->timestamps();

@@ -14,9 +14,10 @@ class CreateReservacionTable extends Migration
     public function up()
     {
         Schema::create('reservacion', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('idreservacion');
-            $table->unsignedInteger('idcliente');
-            $table->integer('idhabitacion');
+            $table->string('identificacion', 45);
+            $table->unsignedInteger('idhabitacion');
             $table->time('fechaingreso');
             $table->time('fechasalida');
             $table->unsignedInteger('idfactura');
@@ -25,11 +26,11 @@ class CreateReservacionTable extends Migration
 
             $table->index(["idhabitacion"], 'fk_reservacion_habitacion1_idx');
 
-            $table->index(["idcliente"], 'fk_reservacion_cliente_idx');
+            $table->index(["identificacion"], 'fk_reservacion_cliente_idx');
 
 
-            $table->foreign('idcliente', 'fk_reservacion_cliente_idx')
-                ->references('idcliente')->on('cliente')
+            $table->foreign('identificacion', 'fk_reservacion_cliente_idx')
+                ->references('identificacion')->on('cliente')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
@@ -42,7 +43,6 @@ class CreateReservacionTable extends Migration
                 ->references('idfactura')->on('factura')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-            $table->timestamps();
         });
     }
 

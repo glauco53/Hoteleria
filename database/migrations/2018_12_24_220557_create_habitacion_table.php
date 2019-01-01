@@ -14,7 +14,8 @@ class CreateHabitacionTable extends Migration
     public function up()
     {
         Schema::create('habitacion', function (Blueprint $table) {
-            $table->increments('idhabitacion');
+            $table->engine = 'InnoDB';
+            $table->unsignedInteger('idhabitacion');
             $table->unsignedInteger('idpiso');
             $table->string('ventana', 45);
             $table->unsignedInteger('idtipo_habitacion');
